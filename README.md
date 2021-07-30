@@ -23,13 +23,13 @@ Dataset](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-wor
 ## Getting started
 
 ### Quick Start
-Render a Virtual KITTI Scene from a trained Scene Graph Models
+Render a Virtual KITTI Scene from a trained Scene Graph Models (make sure the model weights are in ```./example_weights/kitti_tracking_0006_example```)
 ```
 conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c menpo
 conda activate neural_scene_graphs
-cd NeuralSceneGraph
+cd neural-scene-graphs
 bash download_virtual_kitti.sh
-main.py --config example_configs/config_vkitti2_Scene06_render.py
+python main.py --config example_configs/config_kitti_0006_render.py
 tensorboard --logdir=example_weights/summaries --port=6006
 ```
 
@@ -78,14 +78,14 @@ conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c me
 conda activate neural_scene_graphs
 ```
 
-vkitti2:
+vkitti2 example:
 ```
-python main.py --config example_configs/config_vkitti2_Scene06_example.txt
+python main.py --config example_configs/config_vkitti2_Scene06.txt
 tensorboard --logdir=example_weights/summaries --port=6006
 ```
-KITTI
+KITTI example:
 ```
-python main.py --config example_configs/config_kitti_0006_example.txt
+python main.py --config example_configs/config_kitti_0006_example_train.txt
 tensorboard --logdir=example_weights/summaries --port=6006
 ```
 
