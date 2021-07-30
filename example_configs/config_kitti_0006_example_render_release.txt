@@ -1,0 +1,41 @@
+expname = kitti_tracking_0006_example
+basedir = ./example_weights
+datadir = ./data/kitti/training/image02/0006
+dataset_type = kitti
+
+lrate=5e-4
+lrate_decay=250
+# Change if running this on a GPU
+chunk= 16384
+netchunk= 16384
+
+N_rand = 8192
+N_samples = 6
+N_samples_obj = 7
+N_importance = 0
+latent_size=256
+latent_balance = 0.0001
+box_scale=1.9
+
+use_object_properties=True
+multires_obj=4
+
+use_viewdirs = True
+
+raw_noise_std = 1e0
+sampling_method=planes
+plane_type=uniform
+
+render_only=True
+# bckg_only=True
+# obj_only=True
+# white_bkgd=True
+# manipulate=handcrafted_set_06
+
+# Scene06
+near_plane=.5
+far_plane=150.
+
+# No ego motion + driving cars
+first_frame=65
+last_frame=120
