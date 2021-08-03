@@ -24,19 +24,14 @@ Dataset](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-wor
 [KITTI](http://www.cvlibs.net/datasets/kitti/)
 
 ### Quick Start
-Render a Virtual KITTI Scene from a trained Scene Graph Models (make sure the model weights are in ```./example_weights/kitti_tracking_0006_example```)
-https://drive.google.com/file/d/1o28o6gOGHrjQ3LA5Kazj6zdzXEVboS8g/view?usp=sharing
-
-```
-bash download_weights_kitti.sh
-```
+#### Train a Virtual KITTI Scene from a trained Scene Graph Models
 
 ```
 conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c menpo
 conda activate neural_scene_graphs
 cd neural-scene-graphs
 bash download_virtual_kitti.sh
-python main.py --config example_configs/config_kitti_0006_render.py
+python main.py --config example_configs/config_vkitti2_Scene06.py
 tensorboard --logdir=example_weights/summaries --port=6006
 ```
 
@@ -99,10 +94,22 @@ tensorboard --logdir=example_weights/summaries --port=6006
 
 ## Rendering a Sequence
 
-To render a pre-trained download the weights from "LINK" and place the unzipped folder inside './example_weights' or use your own model.
+#### Render a pretrained KITTI sequence
+```
+bash download_weights_kitti.sh
+python main.py --config example_configs/config_kitti_0006_example_render.txt
+```
+
+To render a pre-trained download the weights or use your own model.
+```
+bash download_weights_kitti.sh
+```
 To make a full render pass over all selected images (between the first and last frame) run the provided config with 'render_only=True'.
 - To render only the outputs of the static background node use 'bckg_only=True'
 - for all dynamic parts set 'obj_only=True' & 'white_bkgd=True'
+```
+python main.py --config example_configs/config_kitti_0006_example_render.txt
+```
 
 ---
 
