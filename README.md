@@ -28,6 +28,10 @@ Render a Virtual KITTI Scene from a trained Scene Graph Models (make sure the mo
 https://drive.google.com/file/d/1o28o6gOGHrjQ3LA5Kazj6zdzXEVboS8g/view?usp=sharing
 
 ```
+bash download_weights_kitti.sh
+```
+
+```
 conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c menpo
 conda activate neural_scene_graphs
 cd neural-scene-graphs
