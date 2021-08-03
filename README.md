@@ -1,10 +1,10 @@
-# Neural Scene Graphs for Dynamic Scene
+# Neural Scene Graphs for Dynamic Scene (CVPR 2021)
 
 ![alt text](https://light.princeton.edu/wp-content/uploads/2021/02/scene_graph_isometric_small.png)
 
-### [Project Page](https://light.princeton.edu/publication/neural-scene-graphs) | [Paper](https://arxiv.org/abs/2011.10379)
+### [Project Page](https://light.princeton.edu/publication/neural-scene-graphs) | [Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Ost_Neural_Scene_Graphs_for_Dynamic_Scenes_CVPR_2021_paper.html)
 
-#### Julian Ost <sup>1</sup>, Fahim Mannan <sup>1</sup>, [Nils Thuerey](https://ge.in.tum.de/about/n-thuerey/) <sup>2</sup>, Julian Knodt <sup>3</sup>, [Felix Heide](https://www.cs.princeton.edu/~fheide/) <sup>1, 3</sup>
+#### Julian Ost <sup>1</sup>, Fahim Mannan <sup>1</sup>, Nils Thuerey <sup>2</sup>, Julian Knodt <sup>3</sup>, Felix Heide <sup>1, 3</sup>
 
 Implementation of Neural Scene Graphs, that optimizes multiple radiance fields to represent different
 objects and a static scene background. Learned representations can be rendered with novel object
@@ -115,13 +115,12 @@ python main.py --config example_configs/config_kitti_0006_example_render.txt
 
 Citation
 ```
-@inproceedings{ost2020neuralscenegraphs,
-   author = {Julian Ost
-   and Fahim Mannan
-   and Nils Thuerey
-   and Julian Knodt
-   and Felix Heide},
-   title = {Neural Scene Graphs for Dynamic Scenes},
-   year = {2020},
+@InProceedings{Ost_2021_CVPR,
+    author    = {Ost, Julian and Mannan, Fahim and Thuerey, Nils and Knodt, Julian and Heide, Felix},
+    title     = {Neural Scene Graphs for Dynamic Scenes},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {2856-2865}
 }
 ```
