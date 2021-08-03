@@ -4,7 +4,7 @@
 
 ### [Project Page](https://light.princeton.edu/publication/neural-scene-graphs) | [Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Ost_Neural_Scene_Graphs_for_Dynamic_Scenes_CVPR_2021_paper.html)
 
-#### Julian Ost <sup>1</sup>, Fahim Mannan <sup>1</sup>, Nils Thuerey <sup>2</sup>, Julian Knodt <sup>3</sup>, Felix Heide <sup>1, 3</sup>
+#### Julian Ost, Fahim Mannan, Nils Thuerey, Julian Knodt, Felix Heide
 
 Implementation of Neural Scene Graphs, that optimizes multiple radiance fields to represent different
 objects and a static scene background. Learned representations can be rendered with novel object
