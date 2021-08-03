@@ -6,11 +6,16 @@
 
 #### Julian Ost <sup>1</sup>, Fahim Mannan <sup>1</sup>, [Nils Thuerey](https://ge.in.tum.de/about/n-thuerey/) <sup>2</sup>, Julian Knodt <sup>3</sup>, [Felix Heide](https://www.cs.princeton.edu/~fheide/) <sup>1, 3</sup>
 
-Implementation for optimizing multiple NeRFs to represent different
-objects and scene background and rendering the scene with novel object
-compositions and views. Large parts of code are based on the Implementation of
-"NeRF: Neural Radiance Fields" by Mildenhall et al.:
-[Original NeRF Implementation](https://github.com/bmild/nerf).
+Implementation of Neural Scene Graphs, that optimizes multiple radiance fields to represent different
+objects and a static scene background. Learned representations can be rendered with novel object
+compositions and views. 
+
+Original repository forked from the Implementation of "NeRF: Neural Radiance Fields" by Mildenhall et al.:
+[Original NeRF Implementation](https://github.com/bmild/nerf), [original readme](./nerf_license/README.md)
+
+---
+
+## Getting started
 
 The whole script is currently optimized for the usage with
 [Virtual KITTI 2 
@@ -18,12 +23,10 @@ Dataset](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-wor
  and
 [KITTI](http://www.cvlibs.net/datasets/kitti/)
 
----
-
-## Getting started
-
 ### Quick Start
 Render a Virtual KITTI Scene from a trained Scene Graph Models (make sure the model weights are in ```./example_weights/kitti_tracking_0006_example```)
+https://drive.google.com/file/d/1o28o6gOGHrjQ3LA5Kazj6zdzXEVboS8g/view?usp=sharing
+
 ```
 conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c menpo
 conda activate neural_scene_graphs
@@ -36,7 +39,7 @@ tensorboard --logdir=example_weights/summaries --port=6006
 ---
 **_Disclaimer:_** The codebase is optimized to run on larger GPU servers with a lot of free CPU memory. To test on local and low memory, 
 
-1. Use chunk and netchunk in the config files to limit parallel computed rays.
+1. Use chunk and netchunk in the config files to limit parallel computed rays and sampling points.
    
 or
 
@@ -57,7 +60,7 @@ or change to the desired factor in your config file.
    3. [GPS/IMU data](http://www.cvlibs.net/download.php?file=data_tracking_oxts.zip)
    4. [Camera Calibration Files](http://www.cvlibs.net/download.php?file=data_tracking_calib.zip)
    5. [Training labels](http://www.cvlibs.net/download.php?file=data_tracking_label_2.zip)
-2. Extract everything to ```./data/kitti_tracking``` and keep the data structure
+2. Extract everything to ```./data/kitti``` and keep the data structure
 3. Neural Scene Graphs is well tested and published on real front-facing scenarios with only small movements along the camera viewing direction. We therefore prepared selected config files for KITTI Scenes (0001, 0002, 0006)
 
 #### Virtual KITTI 2
