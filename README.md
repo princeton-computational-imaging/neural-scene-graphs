@@ -24,7 +24,7 @@ Dataset](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-wor
 [KITTI](http://www.cvlibs.net/datasets/kitti/)
 
 ### Quick Start
-#### Train a Virtual KITTI Scene from a trained Scene Graph Models
+#### Train a Virtual KITTI 2 Scene
 
 ```
 conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c menpo
@@ -32,6 +32,17 @@ conda activate neural_scene_graphs
 cd neural-scene-graphs
 bash download_virtual_kitti.sh
 python main.py --config example_configs/config_vkitti2_Scene06.py
+tensorboard --logdir=example_weights/summaries --port=6006
+```
+#### Render a pretrained KITTI Scene from a trained Scene Graph Models
+Follow the setup instructions under [data preparation](#data-preperation) to setup the KITTI dataset.
+
+```
+conda create -n neural_scene_graphs --file requirements.txt -c conda-forge -c menpo
+conda activate neural_scene_graphs
+cd neural-scene-graphs
+bash download_weights_kitti.sh
+python main.py --config example_configs/config_kitti_0006_example_render.py
 tensorboard --logdir=example_weights/summaries --port=6006
 ```
 
